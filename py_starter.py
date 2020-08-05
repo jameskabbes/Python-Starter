@@ -1,7 +1,8 @@
+import pyperclip
+
 ### Helpful python functions
 
 def get_int_input(lower, upper, prompt = 'Enter an number: ', exceptions = []):
-
     '''gets user input of integer between a lower and upper value'''
 
     while True:
@@ -24,12 +25,15 @@ def get_int_input(lower, upper, prompt = 'Enter an number: ', exceptions = []):
         return ans
 
 def print_for_loop(list):
-
     '''prints a list in numercal list format'''
 
     for i in range(len(list)):
         print( str(i+1) + '. ' + str(list[i]))
 
+def copy(string):
+    '''copies string to clipboard'''
+
+    pyperclip.copy(string)
 
 
 if __name__ == '__main__':
